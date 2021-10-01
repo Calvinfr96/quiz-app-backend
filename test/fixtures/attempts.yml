@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  number_correct: MyString
+  integer: MyString
+  passed?: MyString
+  boolean: MyString
+
+two:
+  number_correct: MyString
+  integer: MyString
+  passed?: MyString
+  boolean: MyString
