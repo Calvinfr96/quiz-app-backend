@@ -20,7 +20,7 @@ class AttemptsController < ApplicationController
     private
     
     def attempt_params
-        params.permit(:number_correct, :passed?)
+        params.permit(:number_correct, :passed?, :quiz_id, :user_id)
     end
 
     def render_not_found_response
