@@ -36,7 +36,7 @@ class UsersController < ApplicationController
     end
 
     def render_not_found_response
-        render json: {error: "User not found"}, status: :not_found
+        render json: {error: "User could not be found"}, status: :not_found
     end
 
     def render_unprocessable_entity_response(invalid)
