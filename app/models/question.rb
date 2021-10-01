@@ -5,4 +5,5 @@ class Question < ApplicationRecord
     validates :prompt, uniqueness: true
     validates :answers, presence: true
     validates :correct_index, presence: true
+    validates :quiz_id, presence: true
 end

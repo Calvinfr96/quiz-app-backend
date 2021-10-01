@@ -32,7 +32,7 @@ class QuestionsController < ApplicationController
     private
     
     def question_params
-        params.permit(:prompt, :answers, :correct_index)
+        params.permit(:prompt, :answers, :correct_index, :quiz_id)
     end
 
     def render_not_found_response
