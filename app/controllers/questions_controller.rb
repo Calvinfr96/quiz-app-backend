@@ -43,7 +43,7 @@ class QuestionsController < ApplicationController
         render json: {errors: invalid.record.errors}, status: :unprocessable_entity
     end
 
-    def find_qestion
+    def find_question
         Question.find(params[:id])
     end
 end
