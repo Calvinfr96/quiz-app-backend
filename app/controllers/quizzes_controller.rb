@@ -14,7 +14,7 @@ class QuizzesController < ApplicationController
 
     def show
         quiz = find_quiz
-        render json: quiz
+        render json: quiz, serializer: QuizQuestionSerializer
     end
 
     def update
