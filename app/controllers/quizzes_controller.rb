@@ -47,5 +47,3 @@ class QuizzesController < ApplicationController
         Quiz.find(params[:id])
     end
 end
-
-end
