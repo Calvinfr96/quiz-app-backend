@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :attempts
+  resources :attempts, only: [:index, :create, :show]
   resources :questions
   resources :quizzes
   resources :users
