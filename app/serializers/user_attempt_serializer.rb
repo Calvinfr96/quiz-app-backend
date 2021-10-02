@@ -1,4 +1,3 @@
 class UserAttemptSerializer < ActiveModel::Serializer
-  attributes :id, :name
-  has_many :attempts
+  attributes :id, :name, :attempted_quizzes
 end
