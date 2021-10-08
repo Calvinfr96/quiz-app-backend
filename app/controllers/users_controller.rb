@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
     rescue_from ActiveRecord::RecordNotFound, with: :render_not_found_response
     rescue_from ActiveRecord::RecordInvalid, with: :render_unprocessable_entity_response
+    skip_before_action :authorized, only: [:create]
 
     def index
         users = User.all
@@ -8,7 +9,7 @@ class UsersController < ApplicationController
     end
 
     def create
-        user = User.create!(user_params)
+        @user = User.create!(user_params)
         render json: user, status: :created
     end
 
