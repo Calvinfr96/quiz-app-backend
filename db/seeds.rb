@@ -17,11 +17,16 @@ Attempt.destroy_all
 puts "Database cleared!"
 
 puts "Seeding Users..."
-user_1 = User.create!(name: "Colleen")
-user_2 = User.create!(name: "Shantae")
-user_3 = User.create!(name: "Penny")
-user_4 = User.create!(name: "Winifred")
-user_5 = User.create!(name: "George")
+user_1_salt = BCrypt::Engine.generate_salt
+user_1 = User.create!(name: "Colleen", password_digest: BCrypt::Engine.hash_secret('83RZ\.yHbeW%r8yd', user_1_salt))
+user_2_salt = BCrypt::Engine.generate_salt
+user_2 = User.create!(name: "Shantae", password_digest: BCrypt::Engine.hash_secret('83RZ\.yHbeW%r8yd', user_2_salt))
+user_3_salt = BCrypt::Engine.generate_salt
+user_3 = User.create!(name: "Penny", password_digest: BCrypt::Engine.hash_secret('83RZ\.yHbeW%r8yd', user_3_salt))
+user_4_salt = BCrypt::Engine.generate_salt
+user_4 = User.create!(name: "Winifred", password_digest: BCrypt::Engine.hash_secret('83RZ\.yHbeW%r8yd', user_4_salt))
+user_5_salt = BCrypt::Engine.generate_salt
+user_5 = User.create!(name: "George", password_digest: BCrypt::Engine.hash_secret('83RZ\.yHbeW%r8yd', user_5_salt))
 users = [user_1, user_2, user_3, user_4, user_5]
 
 puts "Users Seeded!"
