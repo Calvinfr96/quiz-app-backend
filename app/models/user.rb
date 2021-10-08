@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+    has_secure_password
     has_many :attempts, dependent: :destroy
     has_many :quizzes, through: :attempts
     validates :name, presence: true
