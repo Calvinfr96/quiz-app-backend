@@ -8,6 +8,7 @@ class QuizzesController < ApplicationController
     end
 
     def create
+        byebug
         quiz = Quiz.create!(quiz_params)
         render json: quiz, status: :created
     end
