@@ -11,6 +11,11 @@ class AuthorizationController < ApplicationController
         end
     end
 
+    def check_user
+        @user = current_user
+        render json: {user: UserSerializer.new(@user)}, status: :accepted
+    end
+
     private
 
     def auth_params
