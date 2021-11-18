@@ -1,8 +1,10 @@
 # Quivia Quiz App Database
-> [Deployed Repo](https://damp-island-75764.herokuapp.com/quizzes)
+> [Deployed Repo](https://damp-island-75764.herokuapp.com/quizzes)\
 > [Front End Repo](https://github.com/Calvinfr96/quiz-app-frontend)
 
 This is a Postgre SQL database built for the [Quivia Quiz App](https://quivia-quiz-app.netlify.app/) using Ruby 2.7.4.
+Quivia is a quiz-taking app where users can test their trivia knowledge by taking quizzes on various trivia topics.
+Authentication is implemented using JSON Web Tokens, allowing users to create an account with a username and password on the front end.
 
 The application was created using the rails generator (`rails new [app name] --api --database=postgresql`) and requires the following additional dependencies to work properly:
 - Active Model Serializers - `gem 'active_model_serializers'`
@@ -19,6 +21,7 @@ The database was built using 4 models:
 4. User
 
 The following Entity Relationship Diagram shows how the models relate to one another:
+
 <img src="public/Project_ERD.png" align="center" />
 
 This README would normally document whatever steps are necessary to get the
